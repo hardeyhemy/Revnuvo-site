@@ -24,7 +24,7 @@ export function ProductCard({ product, showFlowArrow = false }: ProductCardProps
       
       <CardFooter className="flex flex-col items-start gap-3 pt-4">
         <Button variant="outline" className="w-full justify-between" asChild>
-          <Link href={`/products/${product.slug}`}>
+          <Link href={`/products/${product.slug}/`}>
             Learn More <ChevronRight className="h-4 w-4" />
           </Link>
         </Button>

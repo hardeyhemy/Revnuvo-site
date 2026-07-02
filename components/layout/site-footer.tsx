@@ -48,17 +48,17 @@ export function SiteFooter() {
             <h4 className="mb-4 text-sm font-semibold text-foreground">Products</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/products/leadgen" className="hover:text-foreground transition-colors">
+                <Link href="/products/leadgen/" className="hover:text-foreground transition-colors">
                   Leadgen
                 </Link>
               </li>
               <li>
-                <Link href="/products/signals" className="hover:text-foreground transition-colors">
+                <Link href="/products/signals/" className="hover:text-foreground transition-colors">
                   Signals
                 </Link>
               </li>
               <li>
-                <Link href="/products/intelligence" className="hover:text-foreground transition-colors">
+                <Link href="/products/intelligence/" className="hover:text-foreground transition-colors">
                   Intelligence
                 </Link>
               </li>
@@ -68,7 +68,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/products/dns-intelligence" className="hover:text-foreground transition-colors">
+                <Link href="/products/dns-intelligence/" className="hover:text-foreground transition-colors">
                   DNS Intelligence
                 </Link>
               </li>

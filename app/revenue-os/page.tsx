@@ -23,7 +23,7 @@ export default function RevenueOSPage() {
       <div className="mt-20 flex flex-col items-center gap-8">
         {platformFlow.map((product) => (
           <div key={product.slug} className="flex flex-col items-center">
-            <Link href={`/products/${product.slug}`} className="group relative w-full max-w-md rounded-xl border bg-card p-6 text-left transition-all hover:border-primary hover:shadow-xl">
+            <Link href={`/products/${product.slug}/`} className="group relative w-full max-w-md rounded-xl border bg-card p-6 text-left transition-all hover:border-primary hover:shadow-xl">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="text-xl font-semibold">{product.name}</h3>
                 <span className="text-xs text-muted-foreground">0{product.flowStep}</span>
