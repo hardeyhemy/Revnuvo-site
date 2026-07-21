@@ -12,22 +12,33 @@ export function SiteNav() {
             <span className="font-bold text-xl tracking-tight">Revnuvo</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-            <Link href="/revenue-os" className="transition-colors hover:text-foreground">
+            <Link href="/revenue-os/" className="transition-colors hover:text-foreground">
               Platform
             </Link>
-            <Link href="/products" className="transition-colors hover:text-foreground">
-              Solutions
-            </Link>
-            <Link href="/products" className="transition-colors hover:text-foreground">
+            {/*
+              "Solutions" nav item removed — was a duplicate of "Products"
+              (both linked to /products, causing user confusion where the
+              "Solutions" tab appeared not to respond because the click
+              landed on the Products page with no visible change). If a
+              dedicated /solutions/ page is added later (use cases by
+              role/industry), re-add this entry pointing to it.
+            */}
+            <Link href="/products/" className="transition-colors hover:text-foreground">
               Products
             </Link>
-            <Link href="/pricing" className="transition-colors hover:text-foreground">
+            <Link href="/pricing/" className="transition-colors hover:text-foreground">
               Pricing
             </Link>
-            <Link href="/developers" className="transition-colors hover:text-foreground">
+            <Link href="/developers/" className="transition-colors hover:text-foreground">
               Developers
             </Link>
-            <Link href="/company" className="transition-colors hover:text-foreground">
+            {/*
+              "Company" nav item now points to /about/ (the actual page).
+              Previously linked to /company/ which does not exist as a
+              route, causing a 404. The /about/ page is the canonical
+              "about the company" page; "Company" is the nav label.
+            */}
+            <Link href="/about/" className="transition-colors hover:text-foreground">
               Company
             </Link>
           </nav>
