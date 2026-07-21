@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Terminal, Code, BookOpen, Webhook } from 'lucide-react';
 
@@ -18,11 +17,23 @@ export default function DevelopersPage() {
           Query the Revnuvo Revenue OS via a single, fast, and predictable API. Authenticate, fetch signals, and verify trust in milliseconds.
         </p>
         <div className="mt-8 flex justify-center gap-4">
+          {/*
+            Bug fix: both buttons previously linked to /docs and /docs/api,
+            which are not routes in this app — they 404'd. The actual
+            developer documentation lives at the external developers.
+            revnuvo.site domain (separate Cloudflare Pages project).
+            Using <a> instead of <Link> because this is a cross-origin
+            navigation — next/link is for internal routes only.
+          */}
           <Button size="lg" asChild>
-            <Link href="/docs">Read the Docs</Link>
+            <a href="https://developers.revnuvo.site" target="_blank" rel="noopener noreferrer">
+              Read the Docs
+            </a>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="/docs/api">API Reference</Link>
+            <a href="https://developers.revnuvo.site/apis" target="_blank" rel="noopener noreferrer">
+              API Reference
+            </a>
           </Button>
         </div>
       </div>

@@ -22,22 +22,22 @@ export function SiteFooter() {
             <h4 className="mb-4 text-sm font-semibold text-foreground">Platform</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/revenue-os" className="hover:text-foreground transition-colors">
+                <Link href="/revenue-os/" className="hover:text-foreground transition-colors">
                   Revenue OS
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-foreground transition-colors">
+                <Link href="/products/" className="hover:text-foreground transition-colors">
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-foreground transition-colors">
+                <Link href="/pricing/" className="hover:text-foreground transition-colors">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/developers" className="hover:text-foreground transition-colors">
+                <Link href="/developers/" className="hover:text-foreground transition-colors">
                   Developers
                 </Link>
               </li>
@@ -62,8 +62,14 @@ export function SiteFooter() {
                   Intelligence
                 </Link>
               </li>
+              {/*
+                Bug fix: "Trust" previously linked to /products (the index),
+                not /products/trust/. Same bug that existed on the homepage
+                product card and was fixed in PR #1. Now points to the actual
+                Trust product page.
+              */}
               <li>
-                <Link href="/products" className="hover:text-foreground transition-colors">
+                <Link href="/products/trust/" className="hover:text-foreground transition-colors">
                   Trust
                 </Link>
               </li>
@@ -79,17 +85,17 @@ export function SiteFooter() {
             <h4 className="mb-4 text-sm font-semibold text-foreground">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/about" className="hover:text-foreground transition-colors">
+                <Link href="/about/" className="hover:text-foreground transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-foreground transition-colors">
+                <Link href="/contact/" className="hover:text-foreground transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-foreground transition-colors">
+                <Link href="/blog/" className="hover:text-foreground transition-colors">
                   Blog
                 </Link>
               </li>
@@ -100,24 +106,24 @@ export function SiteFooter() {
             <h4 className="mb-4 text-sm font-semibold text-foreground">Legal</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/privacy" className="hover:text-foreground transition-colors">
+                <Link href="/privacy/" className="hover:text-foreground transition-colors">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-foreground transition-colors">
+                <Link href="/terms/" className="hover:text-foreground transition-colors">
                   Terms
                 </Link>
               </li>
               <li>
-                <Link href="/security" className="hover:text-foreground transition-colors">
+                <Link href="/security/" className="hover:text-foreground transition-colors">
                   Security
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Revnuvo Technologies Ltd. All rights reserved.
